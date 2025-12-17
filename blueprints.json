@@ -5,12 +5,12 @@
     "author": "Fellyph Cintra",
     "description": "Novidades do WordPress 6.9 para editores e desenvolvedores"
   },
-  "landingPage": "/wp-6-9/",
   "siteOptions": {
     "blogname": "Novidades do WordPress 6.9",
     "description": "Novidades do WordPress 6.9 para editores e desenvolvedores",
     "permalink_structure": "/%postname%/"
   },
+  "landingPage": "/wp-6-9/",
   "steps": [
     {
       "step": "resetData"
