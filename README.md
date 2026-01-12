@@ -71,8 +71,47 @@ novidades-wp-6-9/
 
 ## 🌍 Languages
 
-- 🇧🇷 **Portuguese** (Português): `blueprints.json`
-- 🇺🇸 **English**: `blueprints.en.json`
+- 🇧🇷 **Portuguese** (Português): `blueprints.json` or `?lang=pt`
+- 🇺🇸 **English**: `blueprints.en.json` or `?lang=en`
+- 🇪🇸 **Spanish** (Español): `?lang=es`
+
+## ☁️ Cloudflare Workers (Dynamic Blueprints)
+
+This project includes a Cloudflare Worker that dynamically generates blueprints with i18n support.
+
+### Deployed URL
+
+```
+https://wp-69-blueprint.fellyph-cintra.workers.dev
+```
+
+### Usage
+
+```bash
+# English
+https://playground.wordpress.net/?blueprint-url=https://wp-69-blueprint.fellyph-cintra.workers.dev/?lang=en
+
+# Portuguese
+https://playground.wordpress.net/?blueprint-url=https://wp-69-blueprint.fellyph-cintra.workers.dev/?lang=pt
+
+# Spanish
+https://playground.wordpress.net/?blueprint-url=https://wp-69-blueprint.fellyph-cintra.workers.dev/?lang=es
+```
+
+### Worker Development
+
+```bash
+cd workers
+
+# Install dependencies
+npm install
+
+# Run locally
+npm run dev
+
+# Deploy to Cloudflare
+npm run deploy
+```
 
 ## 🔧 Blueprint Configuration
 
