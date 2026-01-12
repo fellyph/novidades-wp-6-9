@@ -302,14 +302,14 @@ add_action('wp_enqueue_scripts', function() {
 	);
 });
 
-// Text variables (env) – same technique as MAIN_POST_TITLE/TITLE_FOR_DEVELOERS/TITLE_FOR_USERS
+// Text variables (env) – same technique as MAIN_POST_TITLE/TITLE_FOR_DEVELOPERS/TITLE_FOR_USERS
 $main_post_title = getenv('MAIN_POST_TITLE');
 
 // Template + replacements
 $template = getenv('CONTENT_TEMPLATE');
 $replacements = [
 	'{{TITLE_FOR_USERS}}' => getenv('TITLE_FOR_USERS'),
-	'{{TITLE_FOR_DEVELOERS}}' => getenv('TITLE_FOR_DEVELOERS'),
+	'{{TITLE_FOR_DEVELOPERS}}' => getenv('TITLE_FOR_DEVELOPERS'),
 	'{{USERS_LI_NOTAS}}' => getenv('USERS_LI_NOTAS'),
 	'{{USERS_LI_DRAGDROP}}' => getenv('USERS_LI_DRAGDROP'),
 	'{{USERS_LI_COMMANDS}}' => getenv('USERS_LI_COMMANDS'),
@@ -404,7 +404,7 @@ function generateBlueprint(lang) {
           code: PHP_CODE,
           env: {
             MAIN_POST_TITLE: lang.strings.MAIN_POST_TITLE,
-            TITLE_FOR_DEVELOERS: lang.strings.TITLE_FOR_DEVELOERS,
+            TITLE_FOR_DEVELOPERS: lang.strings.TITLE_FOR_DEVELOPERS,
             TITLE_FOR_USERS: lang.strings.TITLE_FOR_USERS,
             DEV_OVERVIEW_TITLE: lang.strings.DEV_OVERVIEW_TITLE,
             CENTER_TITLE_USERS: lang.strings.CENTER_TITLE_USERS,
