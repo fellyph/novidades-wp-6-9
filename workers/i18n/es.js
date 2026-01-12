@@ -1,0 +1,60 @@
+// Spanish translations
+export const es = {
+  meta: {
+    title: "Novedades de WordPress 6.9",
+    author: "Fellyph Cintra",
+    description: "Novedades de WordPress 6.9 para editores y desarrolladores"
+  },
+  siteOptions: {
+    blogname: "Novedades de WordPress 6.9",
+    description: "Novedades de WordPress 6.9 para editores y desarrolladores"
+  },
+  strings: {
+    MAIN_POST_TITLE: "Novedades de WordPress 6.9",
+    TITLE_FOR_DEVELOERS: "Para desarrolladores",
+    TITLE_FOR_USERS: "Para Editores y Creadores",
+    DEV_OVERVIEW_TITLE: "Para Desarrolladores:",
+    CENTER_TITLE_USERS: "Para Editores y Creadores",
+    CENTER_TITLE_DEVELOPERS: "Para Desarrolladores",
+    USERS_LI_NOTAS: '<strong><a href="#notas">Notas (Notas de Bloque)</a>:</strong> Adjunta notas directamente a los bloques para colaboracion asincrona, reemplazando los antiguos "Comentarios de Bloque".',
+    USERS_LI_DRAGDROP: '<strong><a href="#drag-and-drop">Arrastrar y Soltar (Drag &amp; Drop)</a>:</strong> Arrastra bloques para moverlos directamente, en lugar de crear una copia, para una edicion mas fluida.',
+    USERS_LI_COMMANDS: '<strong><a href="#comandos" data-type="internal" data-id="#comandos">Paleta de Comandos (Command Palette)</a>:</strong> Accede desde cualquier lugar del panel para navegar y ejecutar acciones rapidamente, abriendo camino para la IA.',
+    USERS_LI_NEWBLOCKS: '<a href="#acordeon"><strong>Nuevos Bloques:</strong> </a>Acordeon, Consulta de Terminos (Term Query), Matematicas (Math), Tiempo de Lectura (Time to Read), Conteo de Comentarios y Enlace de Comentarios.',
+    USERS_LI_TEXTFIT: '<strong>Ajuste de Texto (Text Fit):</strong>&nbsp;Opcion para que parrafos y encabezados se adapten al espacio disponible.',
+    USERS_LI_HIDEBLOCKS: '<strong><a href="#ocultar">Ocultar Bloques</a>:</strong> Oculta bloques en la parte visible del sitio, pero mantenlos editables en el backend para pruebas de diseno.',
+    DEV_LI_INTERACTIVITY: '<strong><a href="#interactivity-api">Interactivity API</a>:</strong> Navegacion del lado del cliente sin recargar la pagina y carga condicional de recursos para mayor velocidad.',
+    DEV_LI_ABILITIES: '<strong><a href="#abilities-api">Abilities API</a>:</strong> Permite que herramientas de IA interactuen y modifiquen el sitio, creando un puente entre humanos e IA.',
+    DEV_LI_HTMLAPI: '<a href="#html-api">HTML API</a>: La nueva HTML API ahora es publica.',
+    DEV_LI_BLOCKPROCESSOR: '<strong><a href="https://www.google.com/search?q=Block+Processor">Block Processor</a>:</strong>&nbsp;Optimiza el procesamiento de bloques, mejorando el rendimiento y previniendo bloqueos.',
+    DEV_LI_PHP85: 'Soporte para PHP 8.5',
+    DEV_LI_IEREMOVED: 'Codigo heredado de Internet Explorer eliminado',
+    NOTAS_HEADING: 'Notas',
+    NOTAS_PARAGRAPH: 'El inicio de la edicion colaborativa en WordPress, ahora los editores pueden crear notas dentro del editor de WordPress',
+    DRAGDROP_HEADING: 'Drag &amp; Drop',
+    DRAGDROP_PARAGRAPH: 'La experiencia de arrastrar y soltar ha sido mejorada.',
+    COMMANDS_HEADING: 'Paleta de comandos',
+    COMMANDS_PARAGRAPH: 'La Paleta de Comandos ahora esta disponible en todo el panel de administracion, no solo en el Editor de Sitios. Presiona Ctrl+K (Windows) o Cmd+K (Mac) y podras alternar entre Entradas y Plugins, abrir Estilos, navegar por las plantillas, cambiar entre vistas del editor o crear nuevo contenido — todo sin acceder a ningun menu.',
+    HIDE_BLOCKS_HEADING: 'Ocultar bloques',
+    HIDE_BLOCKS_PARAGRAPH: 'Ahora es posible ocultar temporalmente bloques y contenido promocional.',
+    ACCORDION_HEADING: 'Nuevo Acordeon',
+    ACCORDION_PARAGRAPH: 'El bloque de acordeon ha sido mejorado y ahora permite una mejor personalizacion:',
+    ACCORDION_ITEM1_TITLE: 'Titulo del item Acordeon 1',
+    ACCORDION_ITEM2_TITLE: 'Titulo del item Acordeon 2',
+    ACCORDION_ITEM3_TITLE: 'Titulo del item Acordeon 3',
+    ACCORDION_ITEM_BODY: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse turpis nulla, facilisis at leo sit amet, pellentesque blandit turpis. Phasellus in arcu nisi. Duis consequat ligula non nunc vestibulum interdum. Aenean erat eros, sodales non nisl sed, hendrerit laoreet velit. Nunc bibendum diam eget massa condimentum, a hendrerit libero malesuada. Sed tempus urna sit amet pharetra vehicula. Suspendisse potenti. Praesent at tellus massa. Nulla non ultrices ipsum. Suspendisse rhoncus luctus ipsum, sed sodales nulla pretium non. Maecenas sodales est eros, sit amet venenatis ante posuere vitae.',
+    INTERACTIVITY_HEADING: 'Interactivity API',
+    INTERACTIVITY_P1: 'Para abordar esto, WordPress 6.9 introduce una forma estandarizada de asignar IDs unicos a las directivas de la API de Interactividad.',
+    INTERACTIVITY_P2: 'WordPress 6.9 introduce dos nuevos tipos auxiliares de TypeScript, <code>AsyncAction</code> y <code>TypeYield</code>, a la API de Interactividad. Estos tipos ayudan a los desarrolladores a manejar posibles problemas de TypeScript al trabajar con acciones asincronas.',
+    ABILITIES_HEADING: 'Abilities API',
+    ABILITIES_P1: 'Esta API crea un registro unificado de capacidades que pueden ser descubiertas, validadas y ejecutadas de forma consistente en diferentes contextos, incluyendo PHP, endpoints de API REST y futuras integraciones con inteligencia artificial.',
+    ABILITIES_P2: 'La API de Habilidades es parte de la iniciativa mas amplia AI Building Blocks for WordPress, proporcionando la base para que agentes de IA, herramientas de automatizacion y desarrolladores comprendan e interactuen con las capacidades de WordPress de manera predecible.',
+    HTML_API_HEADING: 'HTML API',
+    HTML_API_PARAGRAPH: 'El metodo <code>serialize_token()</code> del procesador HTML devuelve una representacion completamente normalizada y bien formada del token actualmente coincidente. Fue introducido en el issue #62036 para WordPress 6.7 como un metodo privado que realiza el trabajo pesado de como la API HTML transforma entradas "invalidas" en salidas equivalentes y bien formadas. Por ejemplo:',
+    IE_REMOVED_HEADING: 'Codigo heredado de Internet Explorer eliminado',
+    IE_REMOVED_PARAGRAPH: 'Con WordPress 6.9, varias caracteristicas heredadas que se usaban para dar soporte a Internet Explorer han sido eliminadas. Todas las versiones de Internet Explorer dejaron de ser soportadas en WordPress desde la version 5.8, lanzada en julio de 2021. Estos cambios continuan el proceso de eliminacion de codigo que solo existia para proporcionar soporte a estos navegadores.',
+    PHP85_HEADING: 'Soporte para PHP 8.5',
+    PHP85_PARAGRAPH: 'WordPress 6.9 agrego soporte beta para PHP 8.5, corrigiendo todas las incompatibilidades, advertencias y notificaciones conocidas, mientras mantiene el soporte para versiones mas antiguas de PHP (actualmente 7.2 y superiores). Vale mencionar que el soporte beta se aplica a versiones de PHP que tienen menos del 10% de uso en todos los sitios de WordPress.',
+    // Navigation links
+    NAV_NEXT: 'siguiente'
+  }
+};

@@ -1,0 +1,16 @@
+name = "wp-69-blueprint"
+main = "worker.js"
+compatibility_date = "2024-01-01"
+
+# Uncomment to specify your Cloudflare account ID
+# account_id = "your-account-id-here"
+
+# Development configuration
+[dev]
+port = 8787
+local_protocol = "http"
+
+# Production routes (uncomment and customize)
+# [[routes]]
+# pattern = "your-domain.com/blueprint/*"
+# zone_name = "your-domain.com"

@@ -1,0 +1,30 @@
+{
+  "name": "wp-69-blueprint-worker",
+  "version": "1.0.0",
+  "description": "Cloudflare Worker to generate WordPress 6.9 blueprints with i18n support",
+  "main": "worker.js",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "tail": "wrangler tail",
+    "test": "playwright test",
+    "test:api": "playwright test worker-api",
+    "test:e2e": "playwright test playground-e2e",
+    "test:ui": "playwright test --ui",
+    "test:report": "playwright show-report"
+  },
+  "keywords": [
+    "cloudflare",
+    "workers",
+    "wordpress",
+    "blueprint",
+    "i18n"
+  ],
+  "author": "Fellyph Cintra",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.57.0",
+    "wrangler": "^4.58.0"
+  }
+}

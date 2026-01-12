@@ -1,0 +1,60 @@
+// English translations
+export const en = {
+  meta: {
+    title: "WordPress 6.9 What's New",
+    author: "Fellyph Cintra",
+    description: "WordPress 6.9 updates for editors and developers"
+  },
+  siteOptions: {
+    blogname: "WordPress 6.9 What's New",
+    description: "WordPress 6.9 updates for editors and developers"
+  },
+  strings: {
+    MAIN_POST_TITLE: "WordPress 6.9 What's New",
+    TITLE_FOR_DEVELOERS: "For Developers",
+    TITLE_FOR_USERS: "For Editors and Creators",
+    DEV_OVERVIEW_TITLE: "For Developers:",
+    CENTER_TITLE_USERS: "For Editors and Creators",
+    CENTER_TITLE_DEVELOPERS: "For Developers",
+    USERS_LI_NOTAS: '<strong><a href="#notes">Notes (Block Notes)</a>:</strong> Attach notes directly to blocks for asynchronous collaboration, replacing the old "Block Comments".',
+    USERS_LI_DRAGDROP: '<strong><a href="#drag-and-drop">Drag &amp; Drop</a>:</strong> Drag blocks to move them directly instead of creating a copy, for smoother editing.',
+    USERS_LI_COMMANDS: '<strong><a href="#commands" data-type="internal" data-id="#commands">Command Palette</a>:</strong> Access it anywhere in the dashboard to quickly navigate and execute actions, paving the way for AI.',
+    USERS_LI_NEWBLOCKS: '<a href="#accordion"><strong>New Blocks:</strong> </a>Accordion, Term Query, Math, Reading Time, Comment Count, and Comment Link.',
+    USERS_LI_TEXTFIT: '<strong>Text Fit:</strong>&nbsp;Option for paragraphs and headings to adapt to available space.',
+    USERS_LI_HIDEBLOCKS: '<strong><a href="#hide">Hide Blocks</a>:</strong> Hide blocks on the visible part of the site but keep them editable in the backend for layout testing.',
+    DEV_LI_INTERACTIVITY: '<strong><a href="#interactivity-api">Interactivity API</a>:</strong> Client-side navigation without page reload and conditional resource loading for better performance.',
+    DEV_LI_ABILITIES: '<strong><a href="#abilities-api">Abilities API</a>:</strong> Allows AI tools to interact with and modify the site, creating a bridge between humans and AI.',
+    DEV_LI_HTMLAPI: '<a href="#html-api">HTML API</a>: The new HTML API is now public.',
+    DEV_LI_BLOCKPROCESSOR: '<strong><a href="https://www.google.com/search?q=Block+Processor">Block Processor</a>:</strong>&nbsp;Optimizes block processing, improving performance and preventing crashes.',
+    DEV_LI_PHP85: 'Support for PHP 8.5',
+    DEV_LI_IEREMOVED: 'Legacy Internet Explorer code removed',
+    NOTAS_HEADING: 'Notes',
+    NOTAS_PARAGRAPH: 'The beginning of collaborative editing in WordPress, now editors can create notes within the WordPress editor',
+    DRAGDROP_HEADING: 'Drag &amp; Drop',
+    DRAGDROP_PARAGRAPH: 'The drag and drop experience has been improved.',
+    COMMANDS_HEADING: 'Command Palette',
+    COMMANDS_PARAGRAPH: 'The Command Palette is now available throughout the admin dashboard, not just in the Site Editor. Press Ctrl+K (Windows) or Cmd+K (Mac) and you can switch between Posts and Plugins, open Styles, navigate through templates, switch between editor views, or create new content — all without accessing any menu.',
+    HIDE_BLOCKS_HEADING: 'Hide Blocks',
+    HIDE_BLOCKS_PARAGRAPH: "It's now possible to temporarily hide blocks and promotional content.",
+    ACCORDION_HEADING: 'New Accordion',
+    ACCORDION_PARAGRAPH: 'The accordion block has been improved and now allows better customization:',
+    ACCORDION_ITEM1_TITLE: 'Accordion Item 1 Title',
+    ACCORDION_ITEM2_TITLE: 'Accordion Item 2 Title',
+    ACCORDION_ITEM3_TITLE: 'Accordion Item 3 Title',
+    ACCORDION_ITEM_BODY: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse turpis nulla, facilisis at leo sit amet, pellentesque blandit turpis. Phasellus in arcu nisi. Duis consequat ligula non nunc vestibulum interdum. Aenean erat eros, sodales non nisl sed, hendrerit laoreet velit. Nunc bibendum diam eget massa condimentum, a hendrerit libero malesuada. Sed tempus urna sit amet pharetra vehicula. Suspendisse potenti. Praesent at tellus massa. Nulla non ultrices ipsum. Suspendisse rhoncus luctus ipsum, sed sodales nulla pretium non. Maecenas sodales est eros, sit amet venenatis ante posuere vitae.',
+    INTERACTIVITY_HEADING: 'Interactivity API',
+    INTERACTIVITY_P1: 'To address this, WordPress 6.9 introduces a standardized way to assign unique IDs to Interactivity API directives.',
+    INTERACTIVITY_P2: 'WordPress 6.9 introduces two new TypeScript helper types, <code>AsyncAction</code> and <code>TypeYield</code>, to the Interactivity API. These types help developers handle potential TypeScript issues when working with async actions.',
+    ABILITIES_HEADING: 'Abilities API',
+    ABILITIES_P1: 'This API creates a unified registry of capabilities that can be discovered, validated, and executed consistently across different contexts, including PHP, REST API endpoints, and future AI integrations.',
+    ABILITIES_P2: 'The Abilities API is part of the broader AI Building Blocks for WordPress initiative, providing the foundation for AI agents, automation tools, and developers to understand and interact with WordPress capabilities in a predictable way.',
+    HTML_API_HEADING: 'HTML API',
+    HTML_API_PARAGRAPH: 'The HTML Processor\'s <code>serialize_token()</code> method returns a fully normalized and well-formed representation of the currently matched token. It was introduced in issue #62036 for WordPress 6.7 as a private method that does the heavy lifting of how the HTML API transforms "invalid" inputs into equivalent well-formed outputs. For example:',
+    IE_REMOVED_HEADING: 'Legacy Internet Explorer Code Removed',
+    IE_REMOVED_PARAGRAPH: 'With WordPress 6.9, several legacy features that were used to support Internet Explorer have been removed. All versions of Internet Explorer have been unsupported in WordPress since version 5.8, released in July 2021. These changes continue the process of removing code that only existed to provide support for these browsers.',
+    PHP85_HEADING: 'Support for PHP 8.5',
+    PHP85_PARAGRAPH: "WordPress 6.9 added beta support for PHP 8.5, fixing all known incompatibilities, warnings, and notices, while maintaining support for older PHP versions (currently 7.2 and above). It's worth noting that beta support applies to PHP versions that have less than 10% usage across all WordPress sites.",
+    // Navigation links
+    NAV_NEXT: 'next'
+  }
+};

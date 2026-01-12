@@ -1,14 +1,13 @@
 {
   "$schema": "https://playground.wordpress.net/blueprint-schema.json",
   "meta": {
-    "title": "Novidades do WordPress 6.9",
+    "title": "WordPress 6.9 What's New",
     "author": "Fellyph Cintra",
-    "description": "Novidades do WordPress 6.9 para editores e desenvolvedores"
+    "description": "WordPress 6.9 updates for editors and developers"
   },
   "siteOptions": {
-    "blogname": "Novidades do WordPress 6.9",
-    "description": "Novidades do WordPress 6.9 para editores e desenvolvedores",
-    "permalink_structure": "/%postname%/"
+    "blogname": "WordPress 6.9 What's New",
+    "description": "WordPress 6.9 updates for editors and developers"
   },
   "landingPage": "/wp-6-9/",
   "steps": [
