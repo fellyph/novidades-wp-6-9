@@ -289,18 +289,24 @@ echo WP_HTML_Processor::normalize( $html );
 <p>{{PHP85_PARAGRAPH}}</p>
 <!-- /wp:paragraph -->`;
 
+// MU-Plugin code to enqueue CSS and fonts (runs on every page load)
+const getMuPluginCode = (version) => `<?php
+/**
+ * MU-Plugin: Enqueue custom styles and Vollkorn font
+ */
+add_action('wp_enqueue_scripts', function() {
+    wp_enqueue_style(
+        'wp69-custom-style',
+        'https://raw.githubusercontent.com/fellyph/novidades-wp-6-9/refs/heads/main/src/css/style.css',
+        array(),
+        '${version}'
+    );
+});
+`;
+
 // PHP code for post creation
 const PHP_CODE = `<?php
 require_once '/wordpress/wp-load.php';
-
-// Enqueue custom style
-add_action('wp_enqueue_scripts', function() {
-	wp_enqueue_style(
-		'custom-style',
-		'https://raw.githubusercontent.com/fellyph/novidades-wp-6-9/refs/heads/main/src/css/style.css',
-		false
-	);
-});
 
 // Text variables (env) – same technique as MAIN_POST_TITLE/TITLE_FOR_DEVELOERS/TITLE_FOR_USERS
 $main_post_title = getenv('MAIN_POST_TITLE');
@@ -373,9 +379,10 @@ if (is_wp_error($page_id)) {
 /**
  * Generate blueprint JSON based on language
  * @param {Object} lang - Language object with translations
+ * @param {string} buildVersion - Version string for cache busting
  * @returns {Object} - Blueprint JSON object
  */
-function generateBlueprint(lang) {
+function generateBlueprint(lang, buildVersion) {
   return {
     $schema: "https://playground.wordpress.net/blueprint-schema.json",
     meta: {
@@ -397,6 +404,11 @@ function generateBlueprint(lang) {
         step: "login",
         username: "admin",
         password: "word"
+      },
+      {
+        step: "writeFile",
+        path: "/wordpress/wp-content/mu-plugins/custom-styles.php",
+        data: getMuPluginCode(buildVersion)
       },
       {
         step: "runPHPWithOptions",
@@ -465,15 +477,18 @@ export default {
     // Get the language object, default to English if not found
     const selectedLang = languages[langParam] || languages.en;
 
-    // Generate the blueprint
-    const blueprint = generateBlueprint(selectedLang);
+    // Generate cache-busting version (unique per request ensures fresh CSS)
+    const buildVersion = Date.now().toString();
 
-    // Return the JSON with proper headers
+    // Generate the blueprint
+    const blueprint = generateBlueprint(selectedLang, buildVersion);
+
+    // Return the JSON with proper headers (no caching to ensure fresh deploys)
     return new Response(JSON.stringify(blueprint, null, 2), {
       headers: {
         "Content-Type": "application/json",
         "Access-Control-Allow-Origin": "*",
-        "Cache-Control": "public, max-age=3600",
+        "Cache-Control": "no-store, no-cache, must-revalidate",
       },
     });
   },
