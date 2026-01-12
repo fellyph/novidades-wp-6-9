@@ -1,5 +1,7 @@
 # WordPress 6.9 What's New
 
+[![E2E Tests](https://github.com/fellyph/novidades-wp-6-9/actions/workflows/e2e-tests.yml/badge.svg)](https://github.com/fellyph/novidades-wp-6-9/actions/workflows/e2e-tests.yml)
+
 A comprehensive showcase of WordPress 6.9 features for editors, creators, and developers using WordPress Playground.
 
 <a href="https://playground.wordpress.net?blueprint-url=https%3A%2F%2Fraw.githubusercontent.com%2Ffellyph%2Fnovidades-wp-6-9%2Frefs%2Fheads%2Fmain%2Fblueprints.json" target="_blank" rel="noopener noreferrer">
