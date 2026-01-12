@@ -66,6 +66,18 @@ novidades-wp-6-9/
 │       ├── command-palette.webp
 │       ├── hide-visilibility.webp
 │       └── image-*.webp    # Feature demonstration images
+├── workers/                 # Cloudflare Workers
+│   ├── worker.js           # Main worker entry point
+│   ├── wrangler.toml       # Wrangler configuration
+│   ├── package.json        # Worker dependencies
+│   ├── i18n/               # Internationalization
+│   │   ├── index.js        # Language exports
+│   │   ├── en.js           # English translations
+│   │   ├── pt.js           # Portuguese translations
+│   │   └── es.js           # Spanish translations
+│   └── tests/              # E2E Tests (Playwright)
+│       ├── worker-api.spec.js      # API tests
+│       └── playground-e2e.spec.js  # Playground E2E tests
 └── README.md
 ```
 
@@ -112,6 +124,46 @@ npm run dev
 # Deploy to Cloudflare
 npm run deploy
 ```
+
+## 🧪 Testing
+
+The project includes E2E tests using Playwright to validate the worker API and WordPress Playground integration.
+
+### Running Tests
+
+```bash
+cd workers
+
+# Run all tests
+npm run test
+
+# Run only API tests (fast, ~2 seconds)
+npm run test:api
+
+# Run Playground E2E tests (requires deployed worker)
+DEPLOYED_WORKER_URL=https://wp-69-blueprint.fellyph-cintra.workers.dev npm run test:e2e
+
+# Run tests with Playwright UI
+npm run test:ui
+
+# View HTML test report
+npm run test:report
+```
+
+### Test Coverage
+
+**API Tests (16 tests)**
+- Valid JSON response for all languages (en, pt, es)
+- CORS headers verification
+- Blueprint schema validation (meta, siteOptions, steps)
+- Language-specific content validation
+
+**Playground E2E Tests**
+- Load blueprint in WordPress Playground
+- Verify content renders correctly for each language
+- Visual regression screenshots
+
+> **Note**: Playground E2E tests require a deployed worker URL since WordPress Playground cannot fetch from localhost.
 
 ## 🔧 Blueprint Configuration
 
