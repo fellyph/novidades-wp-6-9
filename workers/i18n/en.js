@@ -11,7 +11,7 @@ export const en = {
   },
   strings: {
     MAIN_POST_TITLE: "WordPress 6.9 What's New",
-    TITLE_FOR_DEVELOERS: "For Developers",
+    TITLE_FOR_DEVELOPERS: "For Developers",
     TITLE_FOR_USERS: "For Editors and Creators",
     DEV_OVERVIEW_TITLE: "For Developers:",
     CENTER_TITLE_USERS: "For Editors and Creators",
