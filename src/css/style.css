@@ -1,6 +1,13 @@
+/* Vollkorn Font - 400-900 normal and italic */
+@import url('https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap');
+
 html {
     scroll-behavior: smooth;
     scroll-snap-type: y proximity;
+}
+
+body {
+    font-family: 'Vollkorn', serif;
 }
 
 .entry-content .wp-block-group.scroll-y {

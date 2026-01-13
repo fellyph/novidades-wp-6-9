@@ -18,7 +18,7 @@ test.describe('Worker API - Blueprint Generation', () => {
     const response = await request.get('/');
 
     expect(response.headers()['access-control-allow-origin']).toBe('*');
-    expect(response.headers()['cache-control']).toContain('public');
+    expect(response.headers()['cache-control']).toContain('no-cache');
   });
 
   for (const lang of SUPPORTED_LANGUAGES) {
@@ -92,12 +92,13 @@ test.describe('Worker API - Blueprint Structure', () => {
 
     expect(blueprint.steps).toBeDefined();
     expect(Array.isArray(blueprint.steps)).toBeTruthy();
-    expect(blueprint.steps.length).toBe(3);
+    expect(blueprint.steps.length).toBe(4);
 
     // Check step types
     const stepTypes = blueprint.steps.map(s => s.step);
     expect(stepTypes).toContain('resetData');
     expect(stepTypes).toContain('login');
+    expect(stepTypes).toContain('writeFile');
     expect(stepTypes).toContain('runPHPWithOptions');
   });
 
