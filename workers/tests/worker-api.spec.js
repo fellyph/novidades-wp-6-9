@@ -126,7 +126,7 @@ test.describe('Worker API - Blueprint Structure', () => {
     expect(env.MAIN_POST_TITLE).toBeDefined();
     expect(env.CONTENT_TEMPLATE).toBeDefined();
     expect(env.TITLE_FOR_USERS).toBeDefined();
-    expect(env.TITLE_FOR_DEVELOERS).toBeDefined();
+    expect(env.TITLE_FOR_DEVELOPERS).toBeDefined();
   });
 });
 
