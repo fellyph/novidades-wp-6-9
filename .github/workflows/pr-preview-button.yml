@@ -22,4 +22,4 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           mode: "append-to-description"
-          blueprint-url: https://raw.githubusercontent.com/fellyph/novidades-wp-6-9/refs/heads/main/blueprints.json
+          blueprint-url: https://raw.githubusercontent.com/fellyph/novidades-wp-6-9/refs/heads/main/blueprint.json
