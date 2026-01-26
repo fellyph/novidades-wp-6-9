@@ -1,5 +1,9 @@
 {
   "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+  "preferredVersions": {
+    "php": "8.3",
+    "wp": "6.9"
+  },
   "meta": {
     "title": "WordPress 6.9 What's New",
     "author": "Fellyph Cintra",
