@@ -13,9 +13,11 @@ body {
 .entry-content .wp-block-group.scroll-y {
     min-height: 100vh;
     scroll-snap-align: start;
-    animation-name: scrollFadeIn;
-    opacity: 0;
-    transform: translateY(5vh);
+
+    /* Scroll-driven animation (Chrome 115+, Edge) */
+    animation: scrollFadeIn linear forwards;
+    animation-timeline: view();
+    animation-range: entry 0% entry 50%;
 }
 
 @keyframes scrollFadeIn {
