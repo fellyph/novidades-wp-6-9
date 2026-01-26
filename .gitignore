@@ -1,0 +1,7 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Blueprint validator cache
+.blueprint-schema-cache.json
